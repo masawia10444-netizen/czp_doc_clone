@@ -1,11 +1,13 @@
-# ใช้ Nginx ตัวเล็กสุด (Alpine) เป็นฐาน
+# ใช้ Nginx ตัวเดิม
 FROM nginx:alpine
 
-# ก๊อปปี้ไฟล์โปรเจคทั้งหมดในเครื่องเรา ไปใส่ในโฟลเดอร์เว็บของ Nginx ใน Container
-COPY . /usr/share/nginx/html
+# --- แก้ตรงนี้ครับ ---
+# เดิม: COPY . /usr/share/nginx/html
+# ใหม่: สร้างโฟลเดอร์ชื่อ czp-doc-clone ซ้อนเข้าไป
+COPY . /usr/share/nginx/html/czp-doc-clone
 
-# (Optional) สร้างไฟล์ Config Nginx พื้นฐานเพื่อให้รองรับ Docsify ได้ดีขึ้น
-# แต่ถ้าเป็น Docsify เดิมๆ ไม่ต้องแก้ก็ได้ครับ ใช้ Default ได้เลย
+# แก้พอร์ตเป็น 8080 เหมือนเดิม
+RUN sed -i 's/listen       80;/listen       8080;/' /etc/nginx/conf.d/default.conf
 
-# เปิด Port 80 (ใน Container)
-EXPOSE 80
+# เปิดพอร์ต 8080
+EXPOSE 8080
