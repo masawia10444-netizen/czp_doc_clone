@@ -1,0 +1,11 @@
+version: '3'
+services:
+  czp-docs:
+    image: czp-docs-image
+    container_name: czp_docs_container
+    build: .
+    ports:
+      # ฝั่งซ้าย (3940) = พอร์ต Server ที่เราจะเข้า (เหมือนเดิม)
+      # ฝั่งขวา (8080) = พอร์ตข้างใน Docker (ที่เราเพิ่งแก้)
+      - "3940:8080"
+    restart: always
