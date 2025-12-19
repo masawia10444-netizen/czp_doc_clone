@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://czp.dga.or.th/cportal/sdk/css/v1/trunks.min.css" />
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <h1 class="is-size-4">Click to show popup</h1>
+      
+      <label class="button" for="modal-one">Popup</label>
+      <input class="modal-open" id="modal-one" type="checkbox" hidden>
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card p-4">
+          <header class="modal-card-head">
+            <p class="modal-card-title">ยืนยันข้อมูล</p>
+            <label class="delete" for="modal-one"></label>
+          </header>
+          <section class="modal-card-body">
+            คุณต้องการยืนคำร้อง เพื่อใช้งานใช่หรือไม่
+          </section>
+          <footer class="modal-card-foot has-text-right	">
+            <label class="button" for="modal-one">ยกเลิก</label>
+            <button class="button is-success">บันทึก</button>
+    
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

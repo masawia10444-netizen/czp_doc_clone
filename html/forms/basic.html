@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://czp.dga.or.th/cportal/sdk/css/v1/trunks.min.css" />
+    <style>html{
+      font-size: 90%;
+    }</style>
+  </head>
+  <body >
+    <section class="section">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+    
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+          <span class="icon  is-left">
+            <span class="material-icons-round">
+              person
+            </span>
+          </span>
+          <span class="icon is-right">
+            <span class="material-icons-round">
+              done
+            </span>
+          </span>
+        </div>
+        <p class="help is-success">This username is available</p>
+      </div>
+    
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+          <span class="icon  is-left">
+            <span class="material-icons-round">
+              email
+            </span>
+          </span>
+          <span class="icon is-small is-right">
+            <span class="material-icons-round">
+              warning
+            </span>
+          </span>
+        </div>
+        <p class="help is-danger">This email is invalid</p>
+      </div>
+    
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea"></textarea>
+        </div>
+      </div>
+    
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox">
+            I agree to the <a href="#">terms and conditions</a>
+          </label>
+        </div>
+      </div>
+    
+      <div class="field">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="question">
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" name="question">
+            No
+          </label>
+        </div>
+      </div>
+    
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Cancel</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

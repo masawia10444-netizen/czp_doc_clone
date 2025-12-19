@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://czp.dga.or.th/cportal/sdk/css/v1/trunks.min.css" />
+  </head>
+  <body>
+    <div  class="tabs-with-content">
+      <div class="tabs is-toggle is-fullwidth">
+        <ul>
+          <li><a>Pictures</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+        </ul>
+      </div>
+      <div>
+        <section class="tab-content">Pictures content</section>
+        <section class="tab-content">Music content</section>
+        <section class="tab-content">Videos content</section>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      let tabsWithContent = (function () {
+        let tabs = document.querySelectorAll('.tabs li');
+        let tabsContent = document.querySelectorAll('.tab-content');
+
+        let deactvateAllTabs = function () {
+          tabs.forEach(function (tab) {
+            tab.classList.remove('is-active');
+          });
+        };
+
+        let hideTabsContent = function () {
+          tabsContent.forEach(function (tabContent) {
+            tabContent.classList.remove('is-active');
+          });
+        };
+
+        let activateTabsContent = function (tab) {
+          tabsContent[getIndex(tab)].classList.add('is-active');
+        };
+
+        let getIndex = function (el) {
+          return [...el.parentElement.children].indexOf(el);
+        };
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            deactvateAllTabs();
+            hideTabsContent();
+            tab.classList.add('is-active');
+            activateTabsContent(tab);
+      
+          });
+        })
+
+        tabs[0].click();
+      })();
+
+    </script>
+  </body>
+</html>
+
